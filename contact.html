@@ -184,7 +184,7 @@
         <div class="offcanvas__overlay"></div>
 
         <!-- Header Section Start -->
-        <header id="header-sticky" class="header-1">
+      <header id="header-sticky" class="header-1">
             <div class="container-fluid">
                 <div class="mega-menu-wrapper">
                     <div class="header-main">
@@ -202,43 +202,47 @@
                                 <div class="main-menu">
                                     <nav id="mobile-menu">
                                         <ul>
-                                            <li>
+                                            <li class="active">
                                                 <a href="index.html">Home</a>
                                             </li>
                                              <li>
                                                 <a href="about.html">About Us</a>
                                             </li>
-                                            <li class="has-dropdown">
-                                                <a href="service.html">Services</a>
+                                           <li class="has-dropdown">
+                                                <a href="services/corporate-and-commercial-law.html">Services</a>
                                                 <ul class="submenu">
                                                     <li><a href="service.html">All Services</a></li>
-                                                    <li><a href="service.html">Corporate & Commercial Law</a></li>
-                                                    <li><a href="service.html">Banking & Finance</a></li>
-                                                    <li><a href="service.html">Dispute Resolution</a></li>
-                                                    <li><a href="service.html">Real Estate & Property</a></li>
-                                                    <li><a href="service.html">Employment & Labour</a></li>
-                                                    <li><a href="service.html">Tax & Investment</a></li>
-                                                    <li><a href="service.html">Intellectual Property</a></li>
+                                                    <li><a href="services/corporate-and-commercial-law.html">Corporate & Commercial Law</a></li>
+                                                    <li><a href="services/banking-and-finance-law.html">Banking & Finance</a></li>
+                                                    <li><a href="services/dispute-resolution-law.html">Dispute Resolution</a></li>
+                                                    <li><a href="services/real-estate-and-property-law.html">Real Estate & Property</a></li>
+                                                    <li><a href="services/employment-and-labour-law.html">Employment & Labour</a></li>
+                                                    <li><a href="services/tax-and-investment-law.html">Tax & Investment</a></li>
+                                                    <li><a href="services/intellectual-property-and-tech-law.html">Intellectual Property</a></li>
+                                                    <li><a href="services/industry-specific-services-law.html">Industry-Specific Services</a></li>
+                                                    <li><a href="services/family-and-personal-law.html">Family & Personal Law</a></li>
+                                                    <li><a href="services/criminal-law.html">Criminal Law</a></li>
+                                                    <li><a href="services/regulatory-and-compliance.html">Regulatory & Compliance</a></li>
+                                                    <li><a href="services/cross-border-legal-services.html">Cross-Border Legal Services</a></li>
                                                 </ul>
                                             </li>
                                              <li class="has-dropdown">
                                                 <a href="#">Who We Help</a>
                                                 <ul class="submenu">
-                                                    <li><a href="project.html">Businesses & Corporations</a></li>
-                                                    <li><a href="project.html">Investors & Family Offices</a></li>
-                                                    <li><a href="project.html">Global Companies</a></li>
-                                                    <li><a href="project.html">Individuals & Families</a></li>
+                                                    <li><a href="who-we-help/businesses-and-corporations.html">Businesses & Corporations</a></li>
+                                                    <li><a href="who-we-help/investors-and-family-offices.html">Investors & Family Offices</a></li>
+                                                    <li><a href="who-we-help/individuals-and-families.html">Individuals & Families</a></li>
                                                 </ul>
                                             </li>
-                                           <li>
+                                           <!-- <li>
                                                 <a href="news-details.html">Insights</a>
                                                 <ul class="submenu">
                                                     <li><a href="news-grid.html">Legal Updates</a></li>
                                                     <li><a href="news.html">Case Studies</a></li>
                                                     <li><a href="news-details.html">Blog Articles</a></li>
                                                 </ul>
-                                            </li>
-                                            <li class="active">
+                                            </li> -->
+                                            <li>
                                                 <a href="contact.html">Contact Us</a>
                                             </li>
                                         </ul>
@@ -409,58 +413,60 @@
                                 <div class="col-lg-6">
                                     <div class="contact-box-items">   
                                         <h2 class="text-anim">Schedule Your Legal Consultation</h2>          
-                                        <form action="contact.php" id="contact-form" class="contact-form-box">
-                                            <div class="row g-4 align-items-center">
-                                                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                                                    <div class="form-clt">
-                                                        <input type="text" placeholder="Full name *" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                                                    <div class="form-clt">
-                                                        <input type="email" placeholder="Email address *" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                                                    <div class="form-clt">
-                                                        <input type="tel" placeholder="Phone number *" required>
-                                                    </div>
-                                                </div>
-                                                 <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                                                    <div class="form-clt">
-                                                        <div class="form">
-                                                            <select class="single-select w-100" required>
-                                                                <option value="">Select legal service</option>
-                                                                <option value="company-setup">Company Setup & Licensing</option>
-                                                                <option value="corporate">Corporate & Commercial Law</option>
-                                                                <option value="banking">Banking & Finance</option>
-                                                                <option value="dispute">Dispute Resolution</option>
-                                                                <option value="real-estate">Real Estate & Property</option>
-                                                                <option value="employment">Employment & Labour Law</option>
-                                                                <option value="family">Family & Personal Law</option>
-                                                                <option value="other">Other Legal Matter</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
-                                                    <div class="form-clt">
-                                                        <textarea name="message" placeholder="Brief description of your legal needs..." required></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12 wow fadeInUp" data-wow-delay=".5s">
-                                                    <div class="form-check mb-3">
-                                                        <input type="checkbox" class="form-check-input" id="privacyCheck" required>
-                                                        <label class="form-check-label small" for="privacyCheck">
-                                                            I agree to the privacy policy and terms of service
-                                                        </label>
-                                                    </div>
-                                                    <button type="submit" class="theme-btn wow fadeInUp" data-wow-delay=".5s">
-                                                        Send Message <i class="fa-solid fa-arrow-up-right"></i>
-                                                    </button>
+                                      <!-- Replace the form section (around line 309-360) with this: -->
+                                    <form action="contact.php" id="contact-form" class="contact-form-box" method="POST">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                                <div class="form-clt">
+                                                    <input type="text" name="name" placeholder="Full name *" required>
                                                 </div>
                                             </div>
-                                        </form>
+                                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                                <div class="form-clt">
+                                                    <input type="email" name="email" placeholder="Email address *" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                                <div class="form-clt">
+                                                    <input type="tel" name="phone" placeholder="Phone number *" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                                <div class="form-clt">
+                                                    <div class="form">
+                                                        <select class="single-select w-100" name="service" required>
+                                                            <option value="">Select legal service</option>
+                                                            <option value="Company Setup & Licensing">Company Setup & Licensing</option>
+                                                            <option value="Corporate & Commercial Law">Corporate & Commercial Law</option>
+                                                            <option value="Banking & Finance">Banking & Finance</option>
+                                                            <option value="Dispute Resolution">Dispute Resolution</option>
+                                                            <option value="Real Estate & Property">Real Estate & Property</option>
+                                                            <option value="Employment & Labour Law">Employment & Labour Law</option>
+                                                            <option value="Family & Personal Law">Family & Personal Law</option>
+                                                            <option value="Other Legal Matter">Other Legal Matter</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                                                <div class="form-clt">
+                                                    <textarea name="message" placeholder="Brief description of your legal needs..." required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".5s">
+                                                <div class="form-check mb-3">
+                                                    <input type="checkbox" class="form-check-input" id="privacyCheck" name="privacy" required>
+                                                    <label class="form-check-label small" for="privacyCheck">
+                                                        I agree to the privacy policy and terms of service
+                                                    </label>
+                                                </div>
+                                                <button type="submit" class="theme-btn wow fadeInUp" data-wow-delay=".5s">
+                                                    Send Message <i class="fa-solid fa-arrow-up-right"></i>
+                                                </button>
+                                                <div id="form-response" class="mt-3" style="display: none;"></div>
+                                            </div>
+                                        </div>
+                                    </form>
                                     </div>
                                 </div>
                             </div>
@@ -522,7 +528,7 @@
                 </section>
 
                 <!-- Footer Section Start -->
-                <footer class="footer-section fix">
+            <footer class="footer-section fix">
                     <div class="footer-area bg-cover" style="background-image: url(assets/img/home-1/footer-bg.jpg);">
                         <div class="container">
                         <div class="footer-widget-wrapper">
@@ -538,10 +544,58 @@
                                             <p>
                                                 Strategic legal solutions for businesses, investors, and individuals expanding in Dubai. Cross-border expertise with offices in Dubai and Australia.
                                             </p>
-                                            <a href="contact.html" class="theme-btn">
-                                                Book Consultation <i class="fa-solid fa-arrow-up-right"></i>
-                                            </a>
+                                           <div class="contact-item" style="color:#fff">
+                                            <ul class="list-area">
+                                                <li>
+                                                    <i class="fa-solid fa-location-dot"></i>
+                                                    Level 1, Fountain Views, Dubai Mall, Downtown, Dubai
+                                                </li>
+                                                <li>
+                                                    <i class="fa-regular fa-envelope"></i>
+                                                    info@altaralaw.com
+                                                </li>
+                                                <li>
+                                                    <i class="fa-regular fa-phone"></i>
+                                                    +971 (56) 189 2379
+                                                </li>
+                                            </ul>
+                                             </div>
+                                             
+                                            <div class="social-icon">
+                                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                            </div>
                                         </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-xl-3 ps-lg-5 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="footer-widget-items">
+                                        <div class="widget-head">
+                                            <h3>Key Services</h3>
+                                        </div>
+
+                                        <ul class="list-area">
+                                            <li><a href="services/corporate-and-commercial-law.html">Corporate & Commercial Law</a></li>
+                                            <li><a href="services/banking-and-finance-law.html">Banking & Finance</a></li>
+                                            <li><a href="services/dispute-resolution-law.html">Dispute Resolution</a></li>
+                                            <li><a href="services/real-estate-and-property-law.html">Real Estate & Property</a></li>
+                                            <li><a href="services/employment-and-labour-law.html">Employment & Labour</a></li>
+                                            <li><a href="services/tax-and-investment-law.html">Tax & Investment</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 ps-lg-5 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="footer-widget-items">
+                                          <ul class="list-area">
+                                            <li><a href="services/intellectual-property-and-tech-law.html">Intellectual Property</a></li>
+                                            <li><a href="services/industry-specific-services-law.html">Industry-Specific Services</a></li>
+                                            <li><a href="services/family-and-personal-law.html">Family & Personal Law</a></li>
+                                            <li><a href="services/criminal-law.html">Criminal Law</a></li>
+                                            <li><a href="services/regulatory-and-compliance.html">Regulatory & Compliance</a></li>
+                                            <li><a href="services/cross-border-legal-services.html">Cross-Border Legal Services</a></li>     
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="col-xl-2 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
@@ -566,93 +620,11 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="news.html">
-                                                    Legal Insights
-                                                </a>
-                                            </li>
-                                            <li>
                                                 <a href="contact.html">
                                                     Contact Us
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="contact.html">
-                                                    Careers
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="contact.html">
-                                                    Privacy Policy
-                                                </a>
-                                            </li>
                                         </ul>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 ps-lg-5 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                                    <div class="footer-widget-items">
-                                        <div class="widget-head">
-                                            <h3>Key Services</h3>
-                                        </div>
-                                        <ul class="list-area">
-                                            <li>
-                                                <a href="service.html">
-                                                    Company Setup
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="service.html">
-                                                    Corporate Law
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="service.html">
-                                                    Dispute Resolution
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="service.html">
-                                                    Real Estate Law
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="service.html">
-                                                    Employment Law
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="service.html">
-                                                    Family & Personal Law
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                                    <div class="footer-widget-items">
-                                        <div class="widget-head">
-                                            <h3>Contact Information</h3>
-                                        </div>
-                                        <div class="contact-item">
-                                            <ul class="contact-list">
-                                                <li>
-                                                    <i class="fa-solid fa-location-dot"></i>
-                                                    Level 1, Fountain Views, Dubai Mall, Downtown, Dubai
-                                                </li>
-                                                <li>
-                                                    <i class="fa-regular fa-envelope"></i>
-                                                    <a href="mailto:info@altaralaw.com">info@altaralaw.com</a>
-                                                </li>
-                                                <li>
-                                                    <i class="fa-regular fa-phone"></i>
-                                                    <a href="tel:+971561892379">+971 (56) 189 2379</a>
-                                                </li>
-                                            </ul>
-                                            <div class="social-icon">
-                                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -667,7 +639,7 @@
                                 </li>
                                 <li>•</li>
                                 <li>
-                                    <a href="contact.html">Terms & Conditions</a>
+                                    <a href="terms-and-conditions.html">Terms & Conditions</a>
                                 </li>
                             </ul>
                         </div>
@@ -723,5 +695,49 @@
         <script src="assets/js/ajax-mail.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+
+                <script>
+                    $(document).ready(function() {
+                        $('#contact-form').on('submit', function(e) {
+                            e.preventDefault();
+                            
+                            var form = $(this);
+                            var submitBtn = form.find('button[type="submit"]');
+                            var originalText = submitBtn.html();
+                            
+                            // Show loading state
+                            submitBtn.html('<i class="fa-solid fa-spinner fa-spin"></i> Sending...');
+                            submitBtn.prop('disabled', true);
+                            
+                            $.ajax({
+                                url: form.attr('action'),
+                                type: 'POST',
+                                data: form.serialize(),
+                                dataType: 'json',
+                                success: function(response) {
+                                    if (response.success) {
+                                        $('#form-response').html('<div class="alert alert-success">' + response.message + '</div>').show();
+                                        form[0].reset();
+                                    } else {
+                                        $('#form-response').html('<div class="alert alert-danger">' + response.message + '</div>').show();
+                                    }
+                                },
+                                error: function() {
+                                    $('#form-response').html('<div class="alert alert-danger">An error occurred. Please try again later.</div>').show();
+                                },
+                                complete: function() {
+                                    submitBtn.html(originalText);
+                                    submitBtn.prop('disabled', false);
+                                    
+                                    // Hide response after 10 seconds
+                                    setTimeout(function() {
+                                        $('#form-response').fadeOut();
+                                    }, 10000);
+                                }
+                            });
+                        });
+                    });
+                    </script>
+
     </body>
 </html>
