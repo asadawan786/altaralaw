@@ -414,7 +414,10 @@
                                     <div class="contact-box-items">   
                                         <h2 class="text-anim">Schedule Your Legal Consultation</h2>          
                                       <!-- Replace the form section (around line 309-360) with this: -->
-                                    <form action="contact.php" id="contact-form" class="contact-form-box" method="POST">
+
+
+
+                                    <form action="assets/mail.php" id="contact-form" class="contact-form-box" method="POST">
                                         <div class="row g-4 align-items-center">
                                             <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                                                 <div class="form-clt">
@@ -434,7 +437,7 @@
                                             <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                                                 <div class="form-clt">
                                                     <div class="form">
-                                                        <select class="single-select w-100" name="service" required>
+                                                        <select class="single-select w-100" name="service_type" required>
                                                             <option value="">Select legal service</option>
                                                             <option value="Company Setup & Licensing">Company Setup & Licensing</option>
                                                             <option value="Corporate & Commercial Law">Corporate & Commercial Law</option>
@@ -697,47 +700,78 @@
         <script src="assets/js/main.js"></script>
 
                 <script>
-                    $(document).ready(function() {
-                        $('#contact-form').on('submit', function(e) {
-                            e.preventDefault();
-                            
-                            var form = $(this);
-                            var submitBtn = form.find('button[type="submit"]');
-                            var originalText = submitBtn.html();
-                            
-                            // Show loading state
-                            submitBtn.html('<i class="fa-solid fa-spinner fa-spin"></i> Sending...');
-                            submitBtn.prop('disabled', true);
-                            
-                            $.ajax({
-                                url: form.attr('action'),
-                                type: 'POST',
-                                data: form.serialize(),
-                                dataType: 'json',
-                                success: function(response) {
-                                    if (response.success) {
-                                        $('#form-response').html('<div class="alert alert-success">' + response.message + '</div>').show();
-                                        form[0].reset();
-                                    } else {
-                                        $('#form-response').html('<div class="alert alert-danger">' + response.message + '</div>').show();
-                                    }
-                                },
-                                error: function() {
-                                    $('#form-response').html('<div class="alert alert-danger">An error occurred. Please try again later.</div>').show();
-                                },
-                                complete: function() {
-                                    submitBtn.html(originalText);
-                                    submitBtn.prop('disabled', false);
-                                    
-                                    // Hide response after 10 seconds
-                                    setTimeout(function() {
-                                        $('#form-response').fadeOut();
-                                    }, 10000);
-                                }
-                            });
-                        });
-                    });
-                    </script>
+$(document).ready(function() {
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        var form = $(this);
+        var submitBtn = form.find('button[type="submit"]');
+        var submitText = submitBtn.find('.submit-text');
+        var loadingSpinner = submitBtn.find('.loading-spinner');
+        var formMessage = $('#form-message');
+        
+        // Show loading state
+        submitText.hide();
+        loadingSpinner.show();
+        submitBtn.prop('disabled', true);
+        formMessage.hide().removeClass('alert-success alert-danger');
+        
+                     // Submit form via AJAX
+                     $.ajax({
+                           type: 'POST',
+                           url: form.attr('action'),
+                           data: form.serialize(),
+                           dataType: 'json',
+                           success: function(response) {
+                              if (response.status === 'success') {
+                                 formMessage.html('<div class="alert alert-success" style="background-color: #d4edda; color: #155724; padding: 12px; border-radius: 4px; border: 1px solid #c3e6cb;">' + response.message + '</div>').show();
+                                 form[0].reset();
+                                 
+                                 // Optional: Redirect after success
+                                 setTimeout(function() {
+                                       formMessage.fadeOut();
+                                 }, 5000);
+                              } else {
+                                 formMessage.html('<div class="alert alert-danger" style="background-color: #f8d7da; color: #721c24; padding: 12px; border-radius: 4px; border: 1px solid #f5c6cb;">' + response.message + '</div>').show();
+                              }
+                           },
+                           error: function() {
+                              formMessage.html('<div class="alert alert-danger" style="background-color: #f8d7da; color: #721c24; padding: 12px; border-radius: 4px; border: 1px solid #f5c6cb;">An error occurred. Please try again or contact us directly at info@primehradvisory.com</div>').show();
+                           },
+                           complete: function() {
+                              submitText.show();
+                              loadingSpinner.hide();
+                              submitBtn.prop('disabled', false);
+                              
+                              // Scroll to message
+                              $('html, body').animate({
+                                 scrollTop: formMessage.offset().top - 100
+                              }, 500);
+                           }
+                     });
+                  });
+    
+                  // Form validation
+                  $('#contact-form input, #contact-form textarea, #contact-form select').on('blur', function() {
+                     var field = $(this);
+                     var value = field.val().trim();
+                     
+                     if (field.prop('required') && !value) {
+                           field.css('border-color', '#dc3545');
+                     } else {
+                           field.css('border-color', '#ced4da');
+                     }
+                     
+                     // Email validation
+                     if (field.attr('type') === 'email' && value) {
+                           var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                           if (!emailPattern.test(value)) {
+                              field.css('border-color', '#dc3545');
+                           }
+                     }
+                  });
+               });
+               </script>
 
     </body>
 </html>
